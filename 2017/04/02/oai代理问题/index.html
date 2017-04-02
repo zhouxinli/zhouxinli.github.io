@@ -87,15 +87,22 @@
 
 
 
-<meta name="description" content="让优秀成为一种习惯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xinli blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
+（2）安装python的包管理器pip:1sudo apt-get install python-pip
+（3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oai代理问题">
+<meta property="og:url" content="http://yoursite.com/2017/04/02/oai代理问题/index.html">
 <meta property="og:site_name" content="xinli blog">
-<meta property="og:description" content="让优秀成为一种习惯">
+<meta property="og:description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
+（2）安装python的包管理器pip:1sudo apt-get install python-pip
+（3">
+<meta property="og:updated_time" content="2017-04-02T11:47:47.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xinli blog">
-<meta name="twitter:description" content="让优秀成为一种习惯">
+<meta name="twitter:title" content="oai代理问题">
+<meta name="twitter:description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
+（2）安装python的包管理器pip:1sudo apt-get install python-pip
+（3">
 
 
 
@@ -123,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/02/oai代理问题/"/>
 
 
 
 
 
-  <title> xinli blog </title>
+  <title> oai代理问题 | xinli blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +276,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/02/oai代理问题/" itemprop="url">
-                  oai代理问题
-                </a>
+                oai代理问题
               
             
           </h1>
@@ -325,9 +327,7 @@
       
 
       
-        
-          
-            <h1 id="为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone"><a href="#为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone" class="headerlink" title="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone"></a>为apt-get、http、git配置代理，解决hash sum mismatch及无法clone</h1><p>第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里<a href="https://www.ss-link.me/buy" target="_blank" rel="external">购买网址</a><br>（1）首先安装python<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python</div></pre></td></tr></table></figure></p>
+        <h1 id="为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone"><a href="#为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone" class="headerlink" title="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone"></a>为apt-get、http、git配置代理，解决hash sum mismatch及无法clone</h1><p>第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里<a href="https://www.ss-link.me/buy" target="_blank" rel="external">购买网址</a><br>（1）首先安装python<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python</div></pre></td></tr></table></figure></p>
 <p>（2）安装python的包管理器pip:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python-pip</div></pre></td></tr></table></figure></p>
 <p>（3）安装shadowsocks 客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pip install shadowsocks</div></pre></td></tr></table></figure></p>
 <p>（4）配置shadowsocks，新建一个shadowsocks.json配置文件：<br>{<br>“server”: “{your-server}”,<br>“server_port”: {your-server-port},<br>“local_port”: 1080,<br>“password”: “{your-password}”,<br>“timeout”: 600,<br>“method”: “aes-256-cfb”<br>}<br> 将服务器地址、端口号、密码根据自己的shadowsocks服务更改。<br> （5）启动shadowsocks，<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sslocal -c shawdowsocks.json <span class="_">-d</span> start</div></pre></td></tr></table></figure></p>
@@ -341,20 +341,27 @@
 <p> 该命令设置临时的http代理，重启后该设置会被清除。永久修改可以在~/.bashrc文件最后加上上面那句话。<br>           (2) 为apt-get设置代理，修改/etc/apt/apt.conf.d/目录下文件apt.conf，如果不存在就新建该文件。<br>                并添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Acquire::http::Proxy <span class="string">"http://127.0.0.1:8123"</span>;</div></pre></td></tr></table></figure></p>
 <p> （3）配置git的代理服务，在你的home目录下新建一个文件.gitconfig, 输入以下信息，保存即可。<br>[push]<br>    default = simple<br>[user]<br>    name = your-name<br>    email = you@email.com<br>[core]<br>    editor = emacs<br>    gitproxy = git-proxy<br>[https]<br>    proxy = <a href="http://127.0.0.1:8123" target="_blank" rel="external">http://127.0.0.1:8123</a><br>[http]<br>    proxy = <a href="http://127.0.0.1:8123" target="_blank" rel="external">http://127.0.0.1:8123</a><br>至此，代理设置完毕。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -362,275 +369,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/搭建博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xinli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xinli blog">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/10/搭建博客/" itemprop="url">
-                  搭建博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T16:36:48+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>最近有同学要安装hexo，给他找了找教程，结果总是不对。我自己试了试，发现好多教程莫名其妙的一致，还都不大好理解，跟现在的3.0还都不一样了，就萌生了自己重新写教程的想法。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/10/搭建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/10/搭建博客/" rel="next" title="搭建博客">
+                <i class="fa fa-chevron-left"></i> 搭建博客
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xinli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xinli blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/07/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T14:49:39+08:00">
-                2017-03-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -638,6 +408,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -657,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -702,6 +485,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone"><span class="nav-number">1.</span> <span class="nav-text">为apt-get、http、git配置代理，解决hash sum mismatch及无法clone</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -807,6 +606,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
