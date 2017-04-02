@@ -87,22 +87,19 @@
 
 
 
-<meta name="description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
-（2）安装python的包管理器pip:1sudo apt-get install python-pip
-（3">
+<meta name="description" content="去年开始一直在搭建OAI平台，然而由于接入网一直编译不通过，查出原因是国内的镜像源的问题，这个问题一直困扰着我，终于通过代理解决了问题在这里和大家分享一下。
+为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oai代理问题">
 <meta property="og:url" content="http://yoursite.com/2017/04/02/oai代理问题/index.html">
 <meta property="og:site_name" content="xinli blog">
-<meta property="og:description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
-（2）安装python的包管理器pip:1sudo apt-get install python-pip
-（3">
-<meta property="og:updated_time" content="2017-04-02T11:47:47.559Z">
+<meta property="og:description" content="去年开始一直在搭建OAI平台，然而由于接入网一直编译不通过，查出原因是国内的镜像源的问题，这个问题一直困扰着我，终于通过代理解决了问题在这里和大家分享一下。
+为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo">
+<meta property="og:updated_time" content="2017-04-02T11:54:14.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oai代理问题">
-<meta name="twitter:description" content="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo apt-get install python
-（2）安装python的包管理器pip:1sudo apt-get install python-pip
-（3">
+<meta name="twitter:description" content="去年开始一直在搭建OAI平台，然而由于接入网一直编译不通过，查出原因是国内的镜像源的问题，这个问题一直困扰着我，终于通过代理解决了问题在这里和大家分享一下。
+为apt-get、http、git配置代理，解决hash sum mismatch及无法clone第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里购买网址（1）首先安装python1sudo">
 
 
 
@@ -327,7 +324,8 @@
       
 
       
-        <h1 id="为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone"><a href="#为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone" class="headerlink" title="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone"></a>为apt-get、http、git配置代理，解决hash sum mismatch及无法clone</h1><p>第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里<a href="https://www.ss-link.me/buy" target="_blank" rel="external">购买网址</a><br>（1）首先安装python<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python</div></pre></td></tr></table></figure></p>
+        <p>去年开始一直在搭建OAI平台，然而由于接入网一直编译不通过，查出原因是国内的镜像源的问题，这个问题一直困扰着我，终于通过代理解决了问题<br>在这里和大家分享一下。</p>
+<h1 id="为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone"><a href="#为apt-get、http、git配置代理，解决hash-sum-mismatch及无法clone" class="headerlink" title="为apt-get、http、git配置代理，解决hash sum mismatch及无法clone"></a>为apt-get、http、git配置代理，解决hash sum mismatch及无法clone</h1><p>第一，首先购买shadowsocks服务，也可以自己搭建shadowsocks服务器，购买可以从这里<a href="https://www.ss-link.me/buy" target="_blank" rel="external">购买网址</a><br>（1）首先安装python<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python</div></pre></td></tr></table></figure></p>
 <p>（2）安装python的包管理器pip:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python-pip</div></pre></td></tr></table></figure></p>
 <p>（3）安装shadowsocks 客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pip install shadowsocks</div></pre></td></tr></table></figure></p>
 <p>（4）配置shadowsocks，新建一个shadowsocks.json配置文件：<br>{<br>“server”: “{your-server}”,<br>“server_port”: {your-server-port},<br>“local_port”: 1080,<br>“password”: “{your-password}”,<br>“timeout”: 600,<br>“method”: “aes-256-cfb”<br>}<br> 将服务器地址、端口号、密码根据自己的shadowsocks服务更改。<br> （5）启动shadowsocks，<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sslocal -c shawdowsocks.json <span class="_">-d</span> start</div></pre></td></tr></table></figure></p>
